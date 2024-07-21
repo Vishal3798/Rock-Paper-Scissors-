@@ -1,0 +1,259 @@
+/* :root {
+  --light-text: #ffffff;
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --outline: hsl(217, 16%, 45%);
+  --bg-grad-1: hsl(214, 47%, 23%);
+  --bg-grad-2: hsl(237, 49%, 15%);
+  --scissors-1: hsl(39, 89%, 49%);
+  --scissors-2: hsl(40, 84%, 53%);
+  --paper-1: hsl(230, 89%, 62%);
+  --paper-2: hsl(230, 89%, 65%);
+  --rock-1: hsl(349, 71%, 52%);
+  --rock-2: hsl(349, 70%, 56%);
+  --shadow-light: #00000026;
+  --shadow-med: #0000004d;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #8CC461;
+
+}
+.score-con{
+max-width: 100%;
+width: 700px;
+height: 150px;
+border: 2px solid white;
+margin-top: 3rem;
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center; 
+padding: 23px 35px;
+color: white;
+}
+.logo{
+  font-size: 36px;
+  font-weight: bold;
+}
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.computer {
+  text-align: center;
+  padding: 10px 18px;
+  background: white;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 120px;
+  border-radius: 5px;
+}
+.label{
+  color: #656565;
+}
+.your {
+  width: 120px;
+  text-align: center;
+  padding: 10px 18px;
+  background: white;
+  display: flex;
+  flex-direction:column-reverse;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+#computer-score{
+  color: hsl(0, 0%, 0%);
+}
+.score {
+  font-size: 2em;
+}
+
+.label {
+  font-size: 1em;
+}
+
+#player-score{
+  color: hsl(0, 0%, 0%);
+}
+.game-con{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.info{ 
+  width: 700px;
+  min-height: 10vh;
+  font-size: 1.2rem;
+  margin: 1rem 0 8 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.computers{
+  display: none;
+}
+
+.option{
+width: 700px;
+min-height: 49vh;
+display: grid;
+place-content: center;
+}
+
+.choices {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+}
+.con{ 
+  position: absolute;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+padding: 18px;
+cursor: pointer;
+}
+.sci-con{
+background: #BD00FF;
+right: 33.5em;
+bottom: 24.5em;
+}
+.rock-con{
+  background: #0074B6;
+left: 32.5em;
+top: 17.5em;
+}
+.paper-con{
+background: #FFA943;
+left: 40em;
+top: 30em;
+}
+.item{
+background:#eee;
+height: 100%;
+border-radius: 50%;
+display: grid;
+place-content: center;
+}
+
+.btn-rule{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem 0.5rem 0;
+  float: right;
+}
+.nxt{
+  float: right;
+  padding: 10px 20px;
+  border: 2px solid hsl(0, 0%, 100%);
+  outline: none;
+  background: transparent; font-size: 16px;
+  letter-spacing: 3px; border-radius: 5px;
+  color:white;
+  cursor: pointer;
+  display: none;
+}
+
+#rules-btn {
+  float: right;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 2px solid hsl(0, 0%, 100%);
+  outline: none;
+  background: transparent; 
+  font-size: 16px;
+  letter-spacing: 3px; border-radius: 5px;
+  color:white;
+  cursor: pointer;
+}
+
+.popup {
+  position:absolute;
+  left: 69.2em;
+  top: 37%;
+  float: right;
+  background: transparent;
+}
+.close{
+  cursor: pointer;
+}
+.you,
+.pc{
+  opacity: 0;
+  color: white;
+}
+/* .result {
+  font-size: 1.2em;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  place-content: center;
+  top: 40%;
+  text-align: center;
+}
+.result::before{
+  position: absolute;
+  content:"";
+  background: white;
+  opacity: 0.6;
+  width: 100%;
+  height:100%;
+} */
+.hry{
+  color: white;
+  padding-bottom: 1rem;
+  z-index: 1;
+
+}
+.play{
+  background: #ffff;
+  z-index: 1;
+  letter-spacing: 3px;
+  color:#6B6B6B; 
+  outline: none;
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+.show
+{
+  float: right;
+  padding: 10px 20px;
+  border: 2px solid hsl(0, 0%, 100%);
+  outline: none;
+  background: transparent; font-size: 16px;
+  letter-spacing: 3px; border-radius: 5px;
+  color:white;
+  cursor: pointer;
+}
+
+
+@keyframes celebration {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.celebration {
+  animation: celebration 0.5s ease-in-out infinite;
+}
